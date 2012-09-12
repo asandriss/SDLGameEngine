@@ -2,8 +2,11 @@
 #include <Windows.h>
 
 CApp::CApp() {
-	_surf_Display = NULL;
-	_surf_test = NULL;
+	surf_grid = NULL;
+	surf_X = NULL;
+	surf_O = NULL;
+
+	surf_display = NULL;
 
 	_running = true;
 }

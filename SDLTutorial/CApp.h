@@ -9,8 +9,12 @@ class CApp : public CEvent {
 private:
 	bool _running;
 
-	SDL_Surface* _surf_Display;
-	SDL_Surface* _surf_test;
+	SDL_Surface* surf_display;
+
+private:
+	SDL_Surface* surf_grid;
+	SDL_Surface* surf_X;
+	SDL_Surface* surf_O;
  
 public:
 	CApp();

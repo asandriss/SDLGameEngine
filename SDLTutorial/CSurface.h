@@ -16,5 +16,8 @@ public:
 
 	// Draw part of a surface on another surface at specified position and from specified location and size
 	static bool OnDraw(SDL_Surface* surf_dest, SDL_Surface* surf_src, int x, int y, int x2, int y2, int w, int h);
+
+	// add transparency to surface for a specified color
+	static bool Transparent(SDL_Surface* surf_dest, int r, int g, int b);
 };
 

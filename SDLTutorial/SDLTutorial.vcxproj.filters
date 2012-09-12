@@ -51,4 +51,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="grid.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="o.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="x.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
