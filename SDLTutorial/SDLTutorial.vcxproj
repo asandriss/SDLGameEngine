@@ -40,7 +40,7 @@
     <IncludePath>C:\SDL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>C:\SDL\lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\SDL\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -49,8 +49,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>c:\SDL\lib\x64\SDLmain.lib;c:\SDL\lib\x64\SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>c:\SDL\lib\x86\SDLmain.lib;c:\SDL\lib\x86\SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,6 +71,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CApp.cpp" />
+    <ClCompile Include="CApp_OnCleanup.cpp" />
+    <ClCompile Include="CApp_OnEvent.cpp" />
+    <ClCompile Include="CApp_OnInit.cpp" />
+    <ClCompile Include="CApp_OnLoop.cpp" />
+    <ClCompile Include="CApp_OnRender.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
