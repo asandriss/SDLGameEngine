@@ -3,6 +3,8 @@
 
 CApp::CApp() {
 	_surf_Display = NULL;
+	_surf_test = NULL;
+
 	_running = true;
 }
  

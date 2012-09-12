@@ -1,11 +1,18 @@
-﻿Build started 2012-09-12 6:56:26 PM.
+﻿Build started 2012-09-12 7:20:35 PM.
      1>Project "C:\Git\SDLTutorial\SDLTutorial\SDLTutorial.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\SDLTutorial.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CApp.cpp CApp_OnEvent.cpp
-         CApp_OnEvent.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CApp.cpp CApp_OnCleanup.cpp CApp_OnEvent.cpp CApp_OnInit.cpp CApp_OnLoop.cpp CApp_OnRender.cpp Surface.cpp
+         Surface.cpp
+         CApp_OnRender.cpp
+         CApp_OnInit.cpp
+         CApp_OnCleanup.cpp
          CApp.cpp
+         Generating Code...
+         Compiling...
+         CApp_OnLoop.cpp
+         CApp_OnEvent.cpp
          Generating Code...
        Link:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Git\SDLTutorial\Debug\SDLTutorial.exe" /NOLOGO c:\SDL\lib\x86\SDLmain.lib c:\SDL\lib\x86\SDL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SDLTutorial.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Git\SDLTutorial\Debug\SDLTutorial.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Git\SDLTutorial\Debug\SDLTutorial.lib" /MACHINE:X86 Debug\CApp.obj
@@ -14,6 +21,7 @@
          Debug\CApp_OnInit.obj
          Debug\CApp_OnLoop.obj
          Debug\CApp_OnRender.obj
+         Debug\Surface.obj
          LINK : C:\Git\SDLTutorial\Debug\SDLTutorial.exe not found or not built by the last incremental link; performing full link
          SDLTutorial.vcxproj -> C:\Git\SDLTutorial\Debug\SDLTutorial.exe
        Manifest:
@@ -25,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.77
+Time Elapsed 00:00:01.17
