@@ -23,4 +23,6 @@ void CApp::OnLButtonDown(int mX, int mY){
 		SetCell(id, GRID_TYPE_O);
 		currentPlayer = 0;
 	}
+
+	CheckGameOver();
 }

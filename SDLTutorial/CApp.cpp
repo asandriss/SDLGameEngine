@@ -2,7 +2,7 @@
 #include <Windows.h>
 
 CApp::CApp() {
-	currentPlayer = 0;
+	gameOver = false;
 
 	surf_grid = NULL;
 	surf_X = NULL;
@@ -38,6 +38,10 @@ void CApp::Reset(){
 	for(int i=0; i<9; i++){
 		grid[i] = GRID_TYPE_NONE;
 	}
+
+	freeCells = 9;
+	currentPlayer = 0;
+	gameOver = false;
 }
 
  void CApp::SetCell(int id, int type){
@@ -45,7 +49,41 @@ void CApp::Reset(){
 	 if(type < 0 || type > GRID_TYPE_O) return;
 
 	 grid[id] = type;
+	 freeCells--;
  }
+
+void CApp::CheckGameOver() {
+	// check rows
+	for(int i=0; i<9; i+=3){
+		if( (grid[i] != GRID_TYPE_NONE) && (grid[i] == grid[i+1]) && (grid[i] == grid[i+2]) ){
+		gameOver = true;
+		}
+	}
+
+	if(!gameOver){
+		// check columns
+		for(int i=0; i<3; i++) {
+			if ( (grid[i] != GRID_TYPE_NONE) && (grid[i] == grid[i+3]) && (grid[i] == grid[i+6]) ){
+				gameOver = true;
+			}
+		}
+	}
+
+	if(!gameOver){
+		// check diagonals
+		if( (grid[4] != GRID_TYPE_NONE) && ((grid[4] == grid[8]) && (grid[4] == grid[0])
+										|| ((grid[4] == grid[2]) && (grid[4] == grid[6])))
+			){
+				gameOver = true;
+		}
+	}
+
+	if(freeCells == 0 || gameOver) {
+		OnRender();
+		SDL_Delay(1000);
+		Reset();
+	}
+}
 
  
 

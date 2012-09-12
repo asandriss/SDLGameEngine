@@ -17,14 +17,18 @@ private:
 	SDL_Surface* surf_O;
  
 private:
-	int grid[9];
+	int grid[9];	// moved to publc for debugging
 	int currentPlayer;
+	
+	int freeCells;
+	bool gameOver;
 
 	enum {
 		GRID_TYPE_NONE = 0,
 		GRID_TYPE_X,
 		GRID_TYPE_O
 	};
+
 
 public:
 	CApp();
@@ -44,6 +48,7 @@ public:
 public:
 	void Reset();
 	void SetCell(int id, int type);
+	void CheckGameOver();
 };
  
 #endif
