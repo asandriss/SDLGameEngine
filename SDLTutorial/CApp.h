@@ -16,17 +16,34 @@ private:
 	SDL_Surface* surf_X;
 	SDL_Surface* surf_O;
  
+private:
+	int grid[9];
+	int currentPlayer;
+
+	enum {
+		GRID_TYPE_NONE = 0,
+		GRID_TYPE_X,
+		GRID_TYPE_O
+	};
+
 public:
 	CApp();
 	int OnExecute(); 
 
 public:
 	bool OnInit();
+	
 	void OnEvent(SDL_Event* Event);
-	void OnExit();	// method in OnEvent file
+	void OnExit();	// exit event
+	void OnLButtonDown(int mX, int mY);	// LeftMouseDown event
+
 	void OnLoop();
 	void OnRender();
 	void OnCleanup();
+
+public:
+	void Reset();
+	void SetCell(int id, int type);
 };
  
 #endif

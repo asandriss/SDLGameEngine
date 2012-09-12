@@ -27,6 +27,8 @@ bool CApp::OnInit() {
 	// Set transparecy colors for X and O images
 	CSurface::Transparent(surf_X, 255, 0, 255);
 	CSurface::Transparent(surf_O, 255, 0, 255);
+
+	Reset();
 		
 	return true;
 }
