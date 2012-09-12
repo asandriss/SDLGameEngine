@@ -18,7 +18,7 @@
     <ClInclude Include="CApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Surface.h">
+    <ClInclude Include="CSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClCompile Include="CApp_OnCleanup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Surface.cpp">
+    <ClCompile Include="CSurface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

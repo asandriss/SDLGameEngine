@@ -2,7 +2,7 @@
     #define _CAPP_H_
 
 #include <SDL.h>
-#include "Surface.h"
+#include "CSurface.h"
 
 class CApp {
 private:
