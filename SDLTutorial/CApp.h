@@ -17,7 +17,7 @@ private:
 	SDL_Surface* surf_O;
  
 private:
-	int grid[9];	// moved to publc for debugging
+	int grid[9];
 	int currentPlayer;
 	
 	int freeCells;
